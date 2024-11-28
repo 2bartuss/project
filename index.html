@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktywne Sekcje</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1 {
+            color: #66b2ff;
+        }
+        button {
+            background-color: #0078d7;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block; /* Zapewnia, że przyciski są pod sobą */
+            width: fit-content;
+        }
+        button:hover {
+            background-color: #005a9e;
+        }
+        .content {
+            border: 1px solid #444;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            background-color: #1c1c1c;
+            display: block; /* Zawsze blokowy element */
+        }
+    </style>
+</head>
+<body>
+    <h1>Technik Informatyk</h1>
+
+    <button onclick="toggleSection('section1')">Zamknij/Otwórz Sekcję 1</button>
+    <div id="section1" class="content">
+        <h2>Sekcja 1</h2>
+        <p>To jest zawartość s. Możesz ją otworzyć lub zamknąć klikając odpowiedni przycisk.</p>
+    </div>
+
+    <button onclick="toggleSection('section2')">Zamknij/Otwórz Sekcję 2</button>
+    <div id="section2" class="content">
+        <h2>Sekcja 2</h2>
+        <p>To jest zawartość sekcji 2. Ta sekcja również obsługuje zamykanie i otwieranie.</p>
+    </div>
+
+    <button onclick="toggleSection('section3')">Zamknij/Otwórz Sekcję 3</button>
+    <div id="section3" class="content">
+        <h2>Sekcja 3</h2>
+        <p>To jest zawartość sekcji 3. Każda sekcja jest niezależna.</p>
+    </div>
+    <button onclick="toggleSection('section4')">Zamknij/Otwórz Sekcję 4</button>
+    <div id="section4" class="content">
+        <h2>Sekcja 4</h2>
+        <p>To jest zawartość sekcji 4. Każda sekcja jest niezależna.</p>
+    </div>
+    <button onclick="toggleSection('section5')">Zamknij/Otwórz Sekcję 5</button>
+    <div id="section5" class="content">
+        <h2>Sekcja 5</h2>
+        <p>To jest zawartość sekcji 5. Każda sekcja jest niezależna.</p>
+    </div>
+    <button onclick="toggleSection('section6')">Zamknij/Otwórz Sekcję 6</button>
+    <div id="section6" class="content">
+        <h2>Sekcja 6</h2>
+        <p>To jest zawartość sekcji 6. Każda sekcja jest niezależna.</p>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section.style.display === 'none') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
